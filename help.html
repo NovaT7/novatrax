@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Help - Anik's Game Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .help-container {
+      max-width: 800px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    .help-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .help-header h1 {
+      font-size: 3em;
+      background: linear-gradient(135deg, #c77dff 0%, #9d4edd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 15px;
+    }
+
+    .help-header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    .chat-container {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      border: 2px solid rgba(199, 125, 255, 0.3);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .chat-header {
+      background: linear-gradient(135deg, #c77dff 0%, #9d4edd 100%);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .chat-header h2 {
+      font-size: 1.5em;
+      color: #fff;
+    }
+
+    .chat-body {
+      padding: 30px;
+      min-height: 400px;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      border-radius: 15px;
+      max-width: 80%;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .bot-message {
+      background: rgba(199, 125, 255, 0.2);
+      border-left: 4px solid #c77dff;
+      margin-right: auto;
+    }
+
+    .user-message {
+      background: rgba(157, 78, 221, 0.2);
+      border-right: 4px solid #9d4edd;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .chat-input-container {
+      padding: 20px;
+      border-top: 2px solid rgba(199, 125, 255, 0.2);
+      display: flex;
+      gap: 10px;
+    }
+
+    .chat-input-container input {
+      flex: 1;
+      padding: 15px 20px;
+      border: 2px solid rgba(199, 125, 255, 0.3);
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      font-size: 1em;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .chat-input-container input:focus {
+      border-color: #c77dff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .chat-input-container button {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #c77dff 0%, #9d4edd 100%);
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .chat-input-container button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(199, 125, 255, 0.4);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 12px 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(199, 125, 255, 0.3);
+      border-radius: 25px;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(199, 125, 255, 0.2);
+      transform: translateX(-5px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Anik's Game Hub</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="help.html" class="active">Help</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+    
+    <div class="help-container">
+      <div class="help-header">
+        <h1>Help Center</h1>
+        <p>Ask me anything about Anik's games, projects, or how to get started!</p>
+      </div>
+
+      <div class="chat-container">
+        <div class="chat-header">
+          <h2>Chat with Assistant</h2>
+        </div>
+
+        <div class="chat-body" id="chatBody">
+          <div class="message bot-message">
+            Hi! I'm Anik's assistant. Ask me about downloading games, Anik's work, or anything else!
+          </div>
+        </div>
+
+        <div class="chat-input-container">
+          <input type="text" id="userInput" placeholder="Type your question here..." />
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Anik</h4>
+        <p>Passionate indie game developer and graphic designer creating unique digital experiences.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="help.html">Help</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: paulanik055@gmail.com</p>
+        <p>Location: Assam, India</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Me</h4>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Anik's Game Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const chatBody = document.getElementById('chatBody');
+    const userInput = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    function addMessage(text, isBot) {
+      const message = document.createElement('div');
+      message.className = 'message ' + (isBot ? 'bot-message' : 'user-message');
+      message.textContent = text;
+      chatBody.appendChild(message);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    function getBotResponse(msg) {
+      const lower = msg.toLowerCase();
+      if (lower.includes('download') || lower.includes('tiny trax')) {
+        return 'You can download Tiny Trax 2D by clicking the download button in the games section on the home page!';
+      } else if (lower.includes('tenma') || lower.includes('legend')) {
+        return 'The Legend of Tenma is an upcoming 2D adventure game with a Japanese theme. Stay tuned for updates!';
+      } else if (lower.includes('anik') || lower.includes('about')) {
+        return 'Anik Paul is a 20-year-old indie game developer and graphic designer from Assam, India. Check out the About page to learn more!';
+      } else if (lower.includes('contact')) {
+        return 'You can contact Anik using the Contact page or through email: paulanik055@gmail.com';
+      } else if (lower.includes('game') || lower.includes('games')) {
+        return 'Anik creates 2D adventure and puzzle games using Unity and Godot. Check out the games section on the home page!';
+      } else if (lower.includes('edit') || lower.includes('graphic') || lower.includes('design')) {
+        return 'Anik has been doing graphic design and editing since 2021, including 3D edits and video editing using Photoshop and Illustrator.';
+      } else {
+        return 'Thanks for your question! Feel free to explore the website or ask me anything else about Anik\'s work.';
+      }
+    }
+
+    function sendMessage() {
+      const text = userInput.value.trim();
+      if (text) {
+        addMessage(text, false);
+        userInput.value = '';
+        
+        setTimeout(() => {
+          addMessage(getBotResponse(text), true);
+        }, 500);
+      }
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -13,42 +13,119 @@
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="#" id="help-btn">Help</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="help.html">Help</a></li>
         <li><a href="login.html">Login</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Download: Tiny Trax 2D</h1>
-        <p>A fast-paced platformer with parkour action and neon vibes. Built by Anik.</p>
-        <div class="game-card">
-          <img src="tiny.png" alt="Game cover" />
-          <div class="game-info">
-            <h3>Tiny Trax 2D</h3>
-            <p>Version 1.0 — Demo build. Packed with challenging levels and secret paths.</p>
-            <!-- Option 1: iframe embed -->
-<!-- <iframe src="https://your-game.itch.io/your-game" 
-        width="800" height="600" 
-        frameborder="0" 
-        allowfullscreen>
-</iframe> -->
-
-<!-- Option 2: button linking to Itch.io page -->
-<!-- <a href="https://your-game.itch.io/your-game" target="_blank" class="download-btn">
-  Play / Download Game
-</a> -->
-
-           <a href="public/game/tiny-trax-2d.apk" download class="download-btn">Download Tiny Trax 2D</a>
-
-          </div>
-        </div>
-        <p class="coming">More projects & edits coming soon — check back later!</p>
+    <!-- Introduction Section -->
+    <section class="intro-section">
+      <div class="intro-content">
+        <h1>Hi, I'm Anik Paul</h1>
+        <p class="intro-text">Game Developer | Graphics Designer | Creator</p>
+        <p class="intro-description">
+          Welcome to my creative hub! I design and develop exciting games, create stunning graphics, 
+          and bring digital experiences to life. Explore my work and join me on this creative journey.
+        </p>
       </div>
     </section>
+
+    <!-- Games Section -->
+    <section class="games-section">
+      <h2 class="section-title">My Games</h2>
+      <div class="games-container">
+        
+        <!-- Existing Game -->
+        <div class="game-card">
+          <img src="tiny.png" alt="Tiny Trax 2D cover" class="game-image" />
+          <div class="game-info">
+            <h3>Tiny Trax 2D</h3>
+            <p>A fast-paced platformer with parkour action and neon vibes. Version 1.0 — Demo build.</p>
+            <a href="public/game/tiny-trax-2d.apk" download class="download-btn">Download Now</a>
+          </div>
+        </div>
+
+        <!-- Coming Soon Game -->
+        <div class="game-card coming-soon-card">
+          <div class="coming-soon-badge">COMING SOON</div>
+          <img src="images/20251025_233436.jpg" alt="The Legend of Tenma" class="game-image" />
+          <div class="game-info">
+            <h3>The Legend of Tenma</h3>
+            <p>An epic 2D adventure game with Japanese theme. Stay tuned for more updates!</p>
+            <button class="download-btn disabled" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GFX/Editing Section -->
+    <section class="gfx-section">
+      <h2 class="section-title">My Edits & Graphics</h2>
+      <div class="scroll-container" id="scrollContainer">
+        <div class="scroll-content" id="scrollContent">
+          <img src="images/giveawayposter1.png" alt="Edit 1" class="gfx-image" />
+          <img src="images/serdipc.png" alt="Edit 2" class="gfx-image" />
+          <img src="images/new.png" alt="Edit 3" class="gfx-image" />
+          <img src="images/serqr.png" alt="Edit 4" class="gfx-image" />
+          <img src="images/shedinbest.png" alt="Edit 5" class="gfx-image" />
+          <img src="images/Tournament 2.png" alt="Edit 6" class="gfx-image" />
+          <!-- Duplicate for seamless loop -->
+          <img src="images/giveawayposter1.png" alt="Edit 1" class="gfx-image" />
+          <img src="images/serdipc.png" alt="Edit 2" class="gfx-image" />
+          <img src="images/new.png" alt="Edit 3" class="gfx-image" />
+          <img src="images/serqr.png" alt="Edit 4" class="gfx-image" />
+          <img src="images/shedinbest.png" alt="Edit 5" class="gfx-image" />
+          <img src="images/Tournament 2.png" alt="Edit 6" class="gfx-image" />
+      </div>
+    </section>
+
+    <!-- Contact Button -->
+    <section class="contact-section">
+      <a href="contact.html" class="contact-btn">Contact Me</a>
+    </section>
+
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Anik</h4>
+        <p>Passionate indie game developer and graphic designer creating unique digital experiences.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#" id="help-footer">Help</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: paulanik055@gmail.com</p>
+        <p>Location: Assam, India</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Me</h4>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Anik's Game Hub. All rights reserved.</p>
+    </div>
+  </footer>
 
   <!-- Chatbot -->
   <div class="chatbot-container" id="chatbot">
