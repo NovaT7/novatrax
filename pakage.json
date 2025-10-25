@@ -1,0 +1,17 @@
+{
+  "name": "mygame-website",
+  "version": "1.0.0",
+  "description": "My portfolio and game download website with AI chatbot",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["game", "portfolio", "AI", "chatbot"],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.9"
+  }
+}

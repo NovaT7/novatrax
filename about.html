@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About - Anik</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Anik's Game Hub</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="#" id="help-btn-about">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-page">
+      <h1>About Anik</h1>
+      <p>I'm Anik — a creative editor and indie game developer. I make visuals, edits, and small games. This site is my portfolio and game hub.</p>
+
+      <div class="about-cards">
+        <div class="card">
+          <h3>🎨 Editing</h3>
+          <p>Video and graphic edits, motion graphics, thumbnails and more.</p>
+        </div>
+        <div class="card">
+          <h3>🎮 Game Dev</h3>
+          <p>Indie games with tight controls and expressive art direction.</p>
+        </div>
+        <div class="card">
+          <h3>📤 Contact</h3>
+          <p>Want to collab? Reach out through the contact link (coming soon).</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chatbot (same markup, reused) -->
+  <div class="chatbot-container" id="chatbot-about">
+    <div class="chatbot-header">
+      <div class="chatbot-title">Help Assistant</div>
+      <button id="close-chat-about" class="icon-btn">✕</button>
+    </div>
+
+    <div class="chatbot-body" id="chat-body-about" role="log" aria-live="polite">
+      <div class="bot-msg">Hi — I'm Anik's assistant. Ask me anything about downloads or the site.</div>
+    </div>
+
+    <form id="chat-form-about" class="chatbot-input" autocomplete="off">
+      <input id="user-input-about" type="text" placeholder="Type your question..." />
+      <button id="send-btn-about" type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

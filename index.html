@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anik's Game Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Anik's Game Hub</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#" id="help-btn">Help</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Download: Tiny Trax 2D</h1>
+        <p>A fast-paced platformer with parkour action and neon vibes. Built by Anik.</p>
+        <div class="game-card">
+          <img src="tiny.png" alt="Game cover" />
+          <div class="game-info">
+            <h3>Tiny Trax 2D</h3>
+            <p>Version 1.0 — Demo build. Packed with challenging levels and secret paths.</p>
+            <!-- Option 1: iframe embed -->
+<!-- <iframe src="https://your-game.itch.io/your-game" 
+        width="800" height="600" 
+        frameborder="0" 
+        allowfullscreen>
+</iframe> -->
+
+<!-- Option 2: button linking to Itch.io page -->
+<!-- <a href="https://your-game.itch.io/your-game" target="_blank" class="download-btn">
+  Play / Download Game
+</a> -->
+
+           <a href="/game/tiny-trax-2d.apk" download class="download-btn">Download Tiny Trax 2D</a>
+
+          </div>
+        </div>
+        <p class="coming">More projects & edits coming soon — check back later!</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chatbot -->
+  <div class="chatbot-container" id="chatbot">
+    <div class="chatbot-header">
+      <div class="chatbot-title">Help Assistant</div>
+      <button id="close-chat" class="icon-btn">✕</button>
+    </div>
+
+    <div class="chatbot-body" id="chat-body" role="log" aria-live="polite">
+      <div class="bot-msg">Hi — I'm Anik's assistant. Ask me about downloading the game or about Anik's work.</div>
+    </div>
+
+    <form id="chat-form" class="chatbot-input" autocomplete="off">
+      <input id="user-input" type="text" placeholder="Type your question..." />
+      <button id="send-btn" type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
