@@ -1,0 +1,98 @@
+.loader-container {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Star canvas fills the whole loader */
+.loader-starfield {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Soft ambient glow in center */
+.loader-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(13, 231, 242, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* Content layer sits above canvas */
+.loader-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+/* Rocket */
+.loader-rocket-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 0 16px rgba(13, 231, 242, 0.6));
+}
+
+.loader-rocket-icon {
+  width: 72px;
+  height: 72px;
+}
+
+/* Title */
+.loader-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.loader-accent {
+  color: #0de7f2;
+  text-shadow: 0 0 14px rgba(13, 231, 242, 0.4);
+}
+
+.loader-tagline {
+  color: #6b7280;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Progress bar */
+.loader-bar-track {
+  width: 220px;
+  height: 3px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  background: #0de7f2;
+  border-radius: 999px;
+  box-shadow: 0 0 10px rgba(13, 231, 242, 0.8);
+}

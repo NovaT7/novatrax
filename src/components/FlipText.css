@@ -1,0 +1,12 @@
+.flip-text-wrapper,
+.flip-cycle-wrapper {
+  display: inline;
+  perspective: 1000px;
+}
+
+.flip-char,
+.flip-char-animated {
+  display: inline-block;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}

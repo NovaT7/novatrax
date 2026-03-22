@@ -1,0 +1,341 @@
+/* ─── HERO ─────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 1.5rem 6rem;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-glow-1 {
+  width: 500px; height: 500px;
+  background: rgba(13,231,242,0.06);
+  top: 5%; left: -5%;
+}
+.hero-glow-2 {
+  width: 380px; height: 380px;
+  background: rgba(139,92,246,0.05);
+  bottom: 5%; right: -3%;
+}
+
+.hero-body {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  pointer-events: none;
+}
+.hero-body > * {
+  pointer-events: auto;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border: 1px solid var(--badge-border);
+  background: var(--badge-bg);
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.01em;
+}
+
+.badge-pulse {
+  width: 5px; height: 5px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: blink 2s infinite;
+  display: inline-block;
+}
+@keyframes blink {
+  0%,100% { opacity:1; }
+  50% { opacity:0.3; }
+}
+
+/* ── THE KEY PART: VengenceUI massive layered text ── */
+.hero-headline {
+  margin-bottom: 2rem;
+  line-height: 0.95;
+}
+
+/* Line 1: "Create immersive" */
+.hero-line {
+  display: block;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--hero-text-main);
+  line-height: 1.0;
+}
+
+.hero-line-1 {
+  font-size: clamp(3.5rem, 10vw, 7.5rem);
+  margin-bottom: 0.1em;
+}
+
+/* "immersive" — lighter, like VengenceUI's "interfaces" */
+.hero-line-highlight {
+  color: var(--hero-text-fade);
+}
+
+/* Line 2: "games & worlds" — biggest line */
+.hero-line-2 {
+  font-size: clamp(3.5rem, 10vw, 7.5rem);
+  color: var(--hero-text-main);
+  margin-bottom: 0.2em;
+}
+
+/* Line 3: smaller, different weight — like VengenceUI's "with precision and speed" */
+.hero-line-3 {
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: var(--hero-text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+  flex-wrap: wrap;
+}
+
+/* FlipText accent inside line 3 */
+.flip-accent {
+  color: var(--accent);
+  font-style: italic;
+}
+
+/* Sub text */
+.hero-sub {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 1.5rem auto 2.5rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* CTAs — VengenceUI minimal style */
+.hero-cta {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 24px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+  letter-spacing: -0.01em;
+  border: 1px solid var(--btn-bg);
+}
+.btn-hero-primary:hover { opacity: 0.8; transform: translateY(-1px); }
+
+.btn-hero-outline {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 24px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--btn-outline-border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+  letter-spacing: -0.01em;
+}
+.btn-hero-outline:hover {
+  background: var(--badge-bg);
+  border-color: var(--text-secondary);
+}
+
+/* ─── MARQUEE STRIP ─────────────────────────────── */
+.marquee-strip {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-muted);
+  padding: 10px 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: mScroll 18s linear infinite;
+  align-items: center;
+}
+
+.mword {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.mdot { color: var(--accent); font-size: 1rem; }
+
+@keyframes mScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ─── SKILLS GRID ───────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--c);
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.skill-card:hover { border-color: var(--c); box-shadow: 0 0 20px color-mix(in srgb, var(--c) 10%, transparent); }
+.skill-card:hover::before { opacity: 1; }
+
+.skill-icon {
+  font-size: 1.75rem;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: color-mix(in srgb, var(--c) 10%, transparent);
+  border-radius: 10px;
+}
+.skill-title { font-size: 1rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+.skill-desc { font-size: 0.87rem; color: var(--text-secondary); line-height: 1.6; flex: 1; }
+.skill-tag {
+  font-size: 0.7rem; color: var(--text-muted); font-weight: 600;
+  letter-spacing: 0.5px; background: var(--bg-muted);
+  border-radius: 6px; padding: 3px 8px; width: fit-content;
+}
+
+/* ─── GAMES ─────────────────────────────────────── */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.game-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.game-card:hover { border-color: var(--accent); box-shadow: 0 0 20px rgba(13,231,242,0.08); }
+.game-img-box { position: relative; aspect-ratio: 16/9; overflow: hidden; }
+.game-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.game-card:hover .game-img { transform: scale(1.06); }
+.gbadge {
+  position: absolute; top: 0.75rem; right: 0.75rem;
+  padding: 3px 10px; border-radius: 999px;
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.gbadge-live { background: var(--accent); color: #000; }
+.gbadge-soon { background: var(--bg-muted); color: var(--text-muted); border: 1px solid var(--border); }
+.game-body { padding: 1.25rem; display: flex; flex-direction: column; flex: 1; gap: 0.5rem; }
+.game-body h3 { font-size: 1rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+.game-body p { font-size: 0.84rem; color: var(--text-secondary); flex: 1; }
+.game-btn-primary {
+  display: block; width: 100%; margin-top: 0.75rem;
+  background: var(--btn-bg); color: var(--btn-text);
+  text-align: center; padding: 9px; border-radius: 7px;
+  font-size: 0.83rem; font-weight: 600; text-decoration: none;
+  transition: opacity 0.2s; letter-spacing: -0.01em;
+}
+.game-btn-primary:hover { opacity: 0.8; }
+.game-btn-locked {
+  width: 100%; margin-top: 0.75rem;
+  background: var(--bg-muted); color: var(--text-muted);
+  cursor: not-allowed; border: 1px solid var(--border); border-radius: 7px;
+  padding: 9px; font-size: 0.83rem; font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+.game-img-placeholder {
+  aspect-ratio: 16/9; background: var(--bg-muted);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem; color: var(--text-muted);
+}
+.tba-tag {
+  color: var(--accent); font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; margin-top: 0.5rem;
+}
+
+/* ─── GFX MARQUEE ───────────────────────────────── */
+.gfx-marquee { overflow: hidden; margin-top: 2rem; }
+.gfx-track {
+  display: flex; gap: 1rem; width: max-content;
+  animation: gScroll 26s linear infinite;
+}
+.gfx-item {
+  width: 280px; height: 180px; border-radius: 10px; overflow: hidden;
+  flex-shrink: 0; border: 1px solid var(--border);
+  transition: transform 0.25s, border-color 0.25s;
+}
+.gfx-item:hover { transform: scale(1.04); border-color: var(--accent); }
+.gfx-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: opacity 0.25s; }
+.gfx-item:hover .gfx-img { opacity: 1; }
+@keyframes gScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-280px * 6 - 1rem * 6)); }
+}
+
+/* ─── CTA CARD ──────────────────────────────────── */
+.cta-card {
+  max-width: 640px; margin: 0 auto;
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  border-radius: 20px; padding: 3.5rem 2.5rem; text-align: center;
+}
+.cta-title {
+  font-size: 2rem; font-weight: 800; letter-spacing: -0.04em;
+  color: var(--text); margin: 0.5rem 0 1rem; line-height: 1.2;
+}
+.cta-sub { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 2rem; }

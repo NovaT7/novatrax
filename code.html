@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nova Trax | Anik's Game Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0de7f2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#102122",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(13, 231, 242, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(13, 231, 242, 0.1);
+        }
+        .glass-card:hover {
+            border-color: rgba(13, 231, 242, 0.4);
+            box-shadow: 0 0 20px rgba(13, 231, 242, 0.15);
+        }
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(13, 231, 242, 0.5);
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<!-- Sticky Navbar -->
+<nav class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+<span class="text-xl font-bold tracking-tight text-slate-100">Nova <span class="text-primary">Trax</span></span>
+</div>
+<div class="hidden md:block">
+<div class="flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#games">Games</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#graphics">Graphics</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
+</div>
+</div>
+<button class="bg-primary text-background-dark px-5 py-2 rounded-lg font-bold text-sm hover:opacity-90 transition-all">
+                    Get Started
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-20 px-4">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(13,231,242,0.1)_0%,transparent_70%)]"></div>
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="relative z-10 text-center max-w-4xl mx-auto">
+<h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
+                Hi, I'm <span class="text-primary neon-glow">Anik Paul</span>
+</h1>
+<p class="text-xl md:text-2xl text-slate-400 mb-10 font-light tracking-wide">
+                Game Developer | Graphics Designer | Creator
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-primary text-background-dark px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform inline-flex items-center justify-center gap-2" href="#games">
+                    View My Games <span class="material-symbols-outlined">sports_esports</span>
+</a>
+<a class="border border-primary/30 text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/10 transition-colors inline-flex items-center justify-center gap-2" href="#contact">
+                    Let's Connect <span class="material-symbols-outlined">chat_bubble</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Games Section -->
+<section class="py-24 px-4 max-w-7xl mx-auto" id="games">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-3xl font-bold mb-2">My Games</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Game Card 1 -->
+<div class="glass-card rounded-2xl overflow-hidden flex flex-col group transition-all duration-500">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Neon 2D platformer game concept art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt1C5n0S3Edjc-FWJdDTLznRdKOHdnBXIoOzLCMc1ctjuHO9VD5xjmfqPFEE0qkj17ragNMBta9IFC9aGz9O8WzM0I0f4Kqvt2Ek_682m9E_svnCdaBGgkyucsjcrAQumJGGvfP340U3yAnGwaaqm8j-YgcuDqN-JQ9HofzquWZU534IYFMomgKjxoqzZLDB6p1gCUIP9XmPc7AwC6Q3FwFulPCJahGmKBNs1RnVIXIyTslrSYulM5INEmKXJs4oLr71wZGSzK8w"/>
+<div class="absolute top-4 right-4 bg-primary text-background-dark px-3 py-1 rounded-full text-xs font-bold uppercase">Available</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Tiny Trax 2D</h3>
+<p class="text-slate-400 text-sm mb-6 flex-grow">A high-octane neon platformer designed for precision movement and visual flair.</p>
+<button class="w-full bg-primary/20 hover:bg-primary text-primary hover:text-background-dark py-3 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        Download APK <span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+<!-- Game Card 2 -->
+<div class="glass-card rounded-2xl overflow-hidden flex flex-col group transition-all duration-500">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Traditional Japanese pagoda in a mystical atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQmsc4SfhePlsOezU0cZgZOR_bnKfvfUTPEP_ZSug11gOjzBUAIWUbTGPMfadGwSpYN8JWHnBH0kien7F99jUaI07q1p0U4zNE8_0GBTJgWHKHtTDX0PD5_se3YkCnon-zeRUF5Oxd8rHiFvUtVbgDoCUf9g3Y2CNH6g3yA8Eut2BXLg9BTBUBKf3mqCwSA-0DfzKVFfA1s4GbqW2gmsMAF9zbf0_v8wqh2HmOhxku5-NBjDJ8ai7yon64eQX5iC3cntkc1Fjc0w"/>
+<div class="absolute top-4 right-4 bg-slate-700 text-slate-100 px-3 py-1 rounded-full text-xs font-bold uppercase">Coming Soon</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Legend of Tenma</h3>
+<p class="text-slate-400 text-sm mb-6 flex-grow">Embark on a mythical journey through ancient Japan in this story-driven adventure.</p>
+<button class="w-full bg-slate-800 cursor-not-allowed text-slate-500 py-3 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        Wishlist (Locked) <span class="material-symbols-outlined text-sm">lock</span>
+</button>
+</div>
+</div>
+<!-- Game Card 3 -->
+<div class="glass-card rounded-2xl overflow-hidden flex flex-col group transition-all duration-500 border-dashed">
+<div class="aspect-video bg-background-dark/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary/20">question_mark</span>
+</div>
+<div class="p-6 flex flex-col flex-grow text-center">
+<h3 class="text-xl font-bold mb-2">New Game Placeholder</h3>
+<p class="text-slate-500 text-sm mb-6 italic">Something epic is currently in the forge...</p>
+<div class="mt-auto inline-block text-primary text-xs font-bold uppercase tracking-widest">Status: TBA</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Graphics Gallery -->
+<section class="py-24 bg-primary/5 overflow-hidden" id="graphics">
+<div class="max-w-7xl mx-auto px-4 mb-12">
+<h2 class="text-3xl font-bold mb-2">Graphics Gallery</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+</div>
+<div class="marquee-container flex">
+<div class="marquee-content flex gap-6 px-4">
+<div class="w-80 h-48 rounded-xl overflow-hidden flex-shrink-0 glass-card">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Abstract vibrant geometric graphic design poster" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMtjDi6Dj3eczeSUtASsr3U3YXyt5bDF31fKxtnRca0bx1xJ-5tJHwJdMsSwlnVRYQIkbBQ3ejGRfYs6pTLEdzVBTM4BK7RO3vmAYFuf3UnQilSYh5mKcfi_pH6Z9ET3QKQ1fJEasAUHY3Gfgx7sQJI1KJFjO_bBGQsg1UHeUUKnOusgKveRRwUu8ZsUr4nhbX4Lf1xNpsAejhuu90UZzZSQLW_iezlDwZpeOJA4MeVPKGq1E8qgesaVRyBgB9PYKOVxmaZ186mw"/>
+</div>
+<div class="w-80 h-48 rounded-xl overflow-hidden flex-shrink-0 glass-card">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Esports tournament branding and motion graphics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9LcZnonLApjVlbs16hBgTdwCcR2K3lg-nzaDsPG6PNVrHf7VaMHtb7Ryp_b5Ff3ba2U5d-1BMW05UbmSz7dDjrKVegBXhn99WEcf5lKDpYeuBJWZvlmVE4IFfBrQ9U9osOdIGLat279JvaN2aGXbbDTZGazOpsXyeRy0y0t_DpYax7p7DEFEV8hWfA4luNDpql811gAP859Bv_SORAtPnevnpzPSKEyYD-oABGk_0Vk869tHQe84QvWASLRxtuZhuZTQqH4lmwA"/>
+</div>
+<div class="w-80 h-48 rounded-xl overflow-hidden flex-shrink-0 glass-card">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Neon vector art illustration style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDmfwq5kv-YUCYxBpGtb-6DToMlZAczeXTVCXe2UAoTARBCzU8Las--G-N4iURHuUFany3RzDuzzPhy3FcFyN8oHDB2N55rMONdw4LWmzb47s_I9Xh3HklVyEpjg82GuthFXwjuPwEHL7ttxZnlKMZ-tMFtsPviGPWKN1b2Q5KLq2q-34fv9DnKkNhwp62t-q1aqrdTVYlm4hiYfF-qMVt_EMHt7WS_OOCNIhiO1i7tEOvINCtVR3ij1jqhRaQELPuuRLQbHnRlg"/>
+</div>
+<div class="w-80 h-48 rounded-xl overflow-hidden flex-shrink-0 glass-card">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Colorful abstract backdrop for digital games" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoApJOIGusiUzX4KdzXNyqqqg1jcyBzFjxKg_pahoQUqeo3ERCw0AEe-hCYf6HI4YWVO9OtGr3X1ygjj1-92G07T6FCC_n6z5pABNHsfC3mHnt9wDDfnHQt-T3RIZKC3uQStsysld-DFcpx3AJjKI1z19OZ-YyqLnbHE4Gwb1T28ArbDyineOiuEr3NdhynbNjvhY1j561eWAY1nlZ_xZ4aRA_nbRTUITrrEAiiohnVojQnSP_qSlT9X4hlvohkNK9vTm0odStVg"/>
+</div>
+<!-- Duplicate for seamless scroll -->
+<div class="w-80 h-48 rounded-xl overflow-hidden flex-shrink-0 glass-card">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Abstract vibrant geometric graphic design poster" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwVoBeFBbRWyKHkSAWpSVPaz-ZTzOKCYAiha6VTnfCo-msInSxuIKJnxeGNZjprymhGmVsVktr5p7O-g4jZNUlR1Cn7vPf0vgG3hfrHT6UO0PrMTLsat4oQ5aONyS3GeklzNV4x19rp2Xuhsxepx8d-Lqf0oxEfWgdqWe6_6gyCkdzJDgHOsWetTI03fmEoUCN0p-u7WR9rxemNrQjZcjGQ2Ro0B5MmR1y77SvdIOdiiC5PAOnFOpr_ATWPxPvMrPmn0PmIbr-Tw"/>
+</div>
+<div class="w-80 h-48 rounded-xl overflow-hidden flex-shrink-0 glass-card">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Esports tournament branding and motion graphics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhn8hOp-WN_ae7mabFvuAkV6edaZzG7ADqbYJQqrmIOjHKECX9DJhh6IpsjipX4d47QMqq1ewT9o3ihnQHwmhXeY8XGWXVBMsBd3A7h1yQdSBAUZWpZ5p31XGqzVNrjMPxUpj0toRfZyVAsN3rk7dNOzPn_cRYGZntv8peGuxZumv5tq9EFu9caFa-ZMtyt0yKQbCQ2RpFE7COti7MfJgPT7TSC-_I4u0ryFGrCLevi5eGTqX1l9tWKAcWckN87NGGi7QgGY8VTQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 px-4 max-w-7xl mx-auto" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-3xl font-bold mb-6">About Me</h2>
+<p class="text-slate-400 leading-relaxed mb-8">
+                    I'm Anik Paul, a passionate creator dedicated to blending immersive gameplay with striking visual aesthetics. With a background in Game Development and Graphics Design, I focus on building digital experiences that resonate. Based in Assam, India, I've spent years honing my skills in industry-leading tools to bring my visions to life.
+                </p>
+<div class="grid grid-cols-3 sm:grid-cols-4 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-2xl glass-card flex items-center justify-center group-hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">view_in_ar</span>
+</div>
+<span class="text-xs font-medium text-slate-400">Unity</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-2xl glass-card flex items-center justify-center group-hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">brush</span>
+</div>
+<span class="text-xs font-medium text-slate-400">Photoshop</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-2xl glass-card flex items-center justify-center group-hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">code</span>
+</div>
+<span class="text-xs font-medium text-slate-400">C#</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-2xl glass-card flex items-center justify-center group-hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+</div>
+<span class="text-xs font-medium text-slate-400">Figma</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-3xl overflow-hidden glass-card p-2">
+<div class="w-full h-full rounded-2xl overflow-hidden bg-background-dark flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Clean programming setup with neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu42ls7Ycu3MLeUiNc-ha69SGJ2RN5-OV2czDiy1WImkWOPuIZX4b-qDp03yNYpeX3BNzLH2b7TdIt3lkCo9DmhnJvfALo1zFYFhOWO_t7xjK09X5rJRnU2cxG3PnDdRXV3IWHsW50jjaBFx7AlNUk2rZFf9F3zUDIjaaCXFAi5nDOGCmL1f-i-k8RMkZay-YrTbNp524LRHG20QSM3KJ5KbvA8V_b2Pgjkfm5MrfmbRe7lV5p2mBuzWWuj8v7CZND2LeUx2nAtQ"/>
+</div>
+</div>
+<div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-2xl hidden md:block">
+<div class="flex items-center gap-4">
+<div class="text-primary font-bold text-4xl">5+</div>
+<div class="text-xs font-medium text-slate-400 leading-tight uppercase">Years of<br/>Experience</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-4 bg-background-dark relative overflow-hidden" id="contact">
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+<p class="text-slate-400 mb-10">Have a project in mind or just want to say hi? Feel free to reach out using the form or through my social channels.</p>
+<div class="space-y-6 mb-12">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Email</p>
+<p class="text-lg">contact@novatrax.hub</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Location</p>
+<p class="text-lg" data-location="Assam, India">Assam, India</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-xl">play_circle</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-xl">group</span>
+</a>
+</div>
+</div>
+<div class="glass-card p-8 rounded-3xl">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-400">Name</label>
+<input class="w-full bg-background-dark/50 border-primary/20 rounded-xl focus:ring-primary focus:border-primary text-slate-100 px-4 py-3 outline-none" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-400">Email</label>
+<input class="w-full bg-background-dark/50 border-primary/20 rounded-xl focus:ring-primary focus:border-primary text-slate-100 px-4 py-3 outline-none" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-400">Message</label>
+<textarea class="w-full bg-background-dark/50 border-primary/20 rounded-xl focus:ring-primary focus:border-primary text-slate-100 px-4 py-3 outline-none" placeholder="How can I help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-background-dark font-bold py-4 rounded-xl hover:shadow-[0_0_20px_rgba(13,231,242,0.4)] transition-all" type="submit">
+                        Send Message
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-12 border-t border-primary/10 px-4">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">rocket_launch</span>
+<span class="text-lg font-bold tracking-tight text-slate-100">Nova <span class="text-primary">Trax</span></span>
+</div>
+<p class="text-slate-500 text-sm">© 2024 Nova Trax / Anik Paul. All Rights Reserved.</p>
+<div class="flex items-center gap-6">
+<a class="text-xs text-slate-500 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>
